@@ -1,12 +1,149 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-body{
+/*-----------------*/
+.rojo {
+    background-color: rgb(255, 0, 0);
+}
+
+.azul {
+    background-color: blue;
+}
+
+.negro {
+    background-color: black;
+}
+
+.blanco {
+    background-color: rgb(255, 255, 255);
+}
+
+.verde {
+    background-color: rgb(0, 151, 58);
+}
+
+/*-----------------*/
+
+
+body {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(0deg ,rgb(6, 67, 148), rgb(4, 138, 138));
+    background: linear-gradient(0deg, rgb(6, 67, 148), rgb(4, 138, 138));
+    display: grid;
+    place-items: center;
+    /*para centrar solo un elemento*/
+}
+
+
+.producto {
+    width: 300px;
+    height: 80%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 15px -3px black;
+    /*para hacer sombras*/
+    border-radius: 14px;
+    /*para redodear los bordes*/
+    overflow: hidden;
+    padding: 10px;
+
+
+
+
+    .header_prod {
+        border-radius: 5px 5px 0 0;
+        height: 40px;
+        width: 100%;
+        background-color: rgb(7, 7, 7);
+
+    }
+
+    .main_prod {
+        height: calc(100% - 40px);
+        width: 100%;
+        background-color: #0796a0;
+
+        .imagen_producto {
+
+            height: 60%;
+            width: 100%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            & ul.colores {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                gap: 5px;
+
+                & li {
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+
+
+                }
+            }
+
+            & ul {
+
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+
+                & li {
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                }
+            }
+
+
+            & ul.talles li {
+                height: 40px;
+                width: 40px;
+                border: solid 2px black;
+                display: grid;
+                place-items: center;
+            }
+
+
+        }
+
+        .desc_prod {
+            height: 40%;
+            width: 100%;
+            background-color: rgb(248, 210, 164);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            & input[type=submit] {
+                width: 100%;
+                padding: 5px 10px;
+                border-radius: 14px;
+                cursor: pointer;
+                border: none;
+
+            }
+
+            & input[type=submit]:hover {
+                background-color: #0796a0;
+                color: #ffffff;
+            
+            }
+
+
+        }
+
+    }
+
 }
